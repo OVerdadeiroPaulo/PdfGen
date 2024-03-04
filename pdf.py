@@ -4,6 +4,9 @@ from reportlab.pdfgen import canvas
 from PIL import Image
 from reportlab.lib.utils import ImageReader 
 from PyQt5.QtCore import QObject, pyqtSignal
+from datetime import datetime
+current_time = datetime.now()
+formatted_time = current_time.strftime("%d%H%M%S")
 
 class PDFGenerator(QObject):
     progress_signal = pyqtSignal(int)
@@ -24,7 +27,12 @@ class PDFGenerator(QObject):
                 if image.endswith(ender):
                     listofImages.append(image)
         index=0
-        chunk = int (100/len(listofImages))
+        if listofImages:
+            chunk = int(100 / len(listofImages))
+        else:
+            chunk = 100
+        if not listofImages :
+            self.progress_signal.emit(100)
 
         for images in listofImages:
             for ender in enders:
@@ -51,4 +59,35 @@ class PDFGenerator(QObject):
                  if listofImages.index(images)== len(listofImages)-1:
                      index = 100
                  self.progress_signal.emit(index)
+    def create_pdf_multiple(self, files, folder):
+        output_directory = os.path.join(folder, "pdfs")
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
 
+        enders = [".jpg", ".png", ".bmp", ".gif", ".ppm", ".webp", "jpeg"]
+        index = 0
+
+        if files:
+            chunk = int(100 / len(files))
+        else:
+            chunk = 100
+
+        c = canvas.Canvas(os.path.join(output_directory, f"{formatted_time}.pdf"), pagesize=letter)
+
+        for image_path in files:
+            for ender in enders:
+                if image_path.lower().endswith(ender):
+                    if os.path.exists(image_path):
+                        img = Image.open(image_path)
+                        reportlab_image = ImageReader(img)
+                        c.drawImage(reportlab_image, 0, 0, width=letter[0], height=letter[1], preserveAspectRatio=False)
+                        c.showPage()
+                    else:
+                        print(f"File not found: {image_path}")
+
+            index += chunk
+            if files.index(image_path) == len(files) - 1:
+                index = 100
+            self.progress_signal.emit(index)
+
+        c.save()
