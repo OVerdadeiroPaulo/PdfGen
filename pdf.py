@@ -11,9 +11,26 @@ formatted_time = current_time.strftime("%d%H%M%S")
 class PDFGenerator(QObject):
     progress_signal = pyqtSignal(int)
 
+    """
+    A class for generating PDFs from images using ReportLab and PIL.
 
+    Attributes:
+    - progress_signal (pyqtSignal): Signal for indicating the progress of the PDF generation.
+
+    Methods:
+    - create_pdf(folder): Create a PDF from a folder of images.
+    - create_pdf_multiple(files, folder): Create a multipaged PDF from a list of image files.
+    """
 
     def create_pdf(self,folder):
+        
+        """
+        Create a PDF from a folder of images.
+
+        Args:
+        - folder (str): The path to the folder containing images.
+        """
+        
         output_directory =os.path.join( folder ,"pdfs")
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)
@@ -60,6 +77,13 @@ class PDFGenerator(QObject):
                      index = 100
                  self.progress_signal.emit(index)
     def create_pdf_multiple(self, files, folder):
+        """
+        Create a multipaged PDF from a list of image files.
+
+        Args:
+        - files (list): List of paths to image files.
+        - folder (str): The path to the output folder.
+        """
         output_directory = os.path.join(folder, "pdfs")
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)

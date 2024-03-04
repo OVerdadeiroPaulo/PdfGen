@@ -1,0 +1,1186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>menu</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/paulo/Documents/recibo/pdfGen/menu.py">/home/paulo/Documents/recibo/pdfGen/menu.py</a></font></td></tr></table>
+    <p><tt>menu.py&nbsp;-&nbsp;Image&nbsp;to&nbsp;Pdf&nbsp;Converter&nbsp;GUI<br>
+&nbsp;<br>
+This&nbsp;script&nbsp;provides&nbsp;a&nbsp;graphical&nbsp;user&nbsp;interface&nbsp;(GUI)&nbsp;for&nbsp;converting&nbsp;images&nbsp;to&nbsp;PDFs.<br>
+It&nbsp;uses&nbsp;PyQt5&nbsp;for&nbsp;the&nbsp;GUI&nbsp;components&nbsp;and&nbsp;PDFGenerator&nbsp;class&nbsp;from&nbsp;the&nbsp;pdf&nbsp;module&nbsp;for&nbsp;PDF&nbsp;creation.<br>
+&nbsp;<br>
+Dependencies:<br>
+-&nbsp;PyQt5<br>
+-&nbsp;pdf&nbsp;module&nbsp;(containing&nbsp;PDFGenerator&nbsp;class)<br>
+-&nbsp;Pillow&nbsp;(PIL)&nbsp;for&nbsp;image&nbsp;handling<br>
+&nbsp;<br>
+Usage:<br>
+Run&nbsp;the&nbsp;script&nbsp;using&nbsp;Python&nbsp;3.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;python3&nbsp;menu.py</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtCore.html#QThread">PyQt5.QtCore.QThread</a>(<a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="menu.html#PDFThread">PDFThread</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QMainWindow">PyQt5.QtWidgets.QMainWindow</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="menu.html#StartWindow">StartWindow</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFThread">class <strong>PDFThread</strong></a>(<a href="PyQt5.QtCore.html#QThread">PyQt5.QtCore.QThread</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#PDFThread">PDFThread</a>(folderpath,&nbsp;type,&nbsp;files=None)<br>
+&nbsp;<br>
+<a href="#PDFThread">PDFThread</a>&nbsp;-&nbsp;Custom&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>&nbsp;for&nbsp;PDF&nbsp;generation<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;inherits&nbsp;from&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>&nbsp;and&nbsp;is&nbsp;responsible&nbsp;for&nbsp;creating&nbsp;PDFs<br>
+either&nbsp;from&nbsp;a&nbsp;single&nbsp;folder&nbsp;or&nbsp;multiple&nbsp;selected&nbsp;files.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;folderpath&nbsp;(str):&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;folder&nbsp;containing&nbsp;images&nbsp;(for&nbsp;single&nbsp;folder&nbsp;conversion).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;(int):&nbsp;Type&nbsp;of&nbsp;conversion&nbsp;(0&nbsp;for&nbsp;single&nbsp;folder,&nbsp;1&nbsp;for&nbsp;multiple&nbsp;files).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;files&nbsp;(list):&nbsp;List&nbsp;of&nbsp;file&nbsp;paths&nbsp;(for&nbsp;multiple&nbsp;files&nbsp;conversion).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pdf_generator&nbsp;(PDFGenerator):&nbsp;Instance&nbsp;of&nbsp;the&nbsp;PDFGenerator&nbsp;class&nbsp;for&nbsp;PDF&nbsp;creation.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="menu.html#PDFThread">PDFThread</a></dd>
+<dd><a href="PyQt5.QtCore.html#QThread">PyQt5.QtCore.QThread</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFThread-__init__"><strong>__init__</strong></a>(self, folderpath, type, files=None)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-run"><strong>run</strong></a>(self)</dt><dd><tt><a href="#PDFThread-run">run</a>(self)</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QThread">PyQt5.QtCore.QThread</a>:<br>
+<dl><dt><a name="PDFThread-currentThread"><strong>currentThread</strong></a>(...)</dt><dd><tt><a href="#PDFThread-currentThread">currentThread</a>()&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QThread">QThread</a>]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-currentThreadId"><strong>currentThreadId</strong></a>(...)</dt><dd><tt><a href="#PDFThread-currentThreadId">currentThreadId</a>()&nbsp;-&gt;&nbsp;Optional[PyQt5.sip.voidptr]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#PDFThread-event">event</a>(self,&nbsp;event:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-eventDispatcher"><strong>eventDispatcher</strong></a>(...)</dt><dd><tt><a href="#PDFThread-eventDispatcher">eventDispatcher</a>(self)&nbsp;-&gt;&nbsp;Optional[QAbstractEventDispatcher]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#PDFThread-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#PDFThread-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-exit"><strong>exit</strong></a>(...)</dt><dd><tt><a href="#PDFThread-exit">exit</a>(self,&nbsp;returnCode:&nbsp;int&nbsp;=&nbsp;0)</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound PYQT_SIGNAL finished()&gt;
+<dl><dt><a name="PDFThread-idealThreadCount"><strong>idealThreadCount</strong></a>(...)</dt><dd><tt><a href="#PDFThread-idealThreadCount">idealThreadCount</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isFinished"><strong>isFinished</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isFinished">isFinished</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isInterruptionRequested"><strong>isInterruptionRequested</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isInterruptionRequested">isInterruptionRequested</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isRunning"><strong>isRunning</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isRunning">isRunning</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-loopLevel"><strong>loopLevel</strong></a>(...)</dt><dd><tt><a href="#PDFThread-loopLevel">loopLevel</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-msleep"><strong>msleep</strong></a>(...)</dt><dd><tt><a href="#PDFThread-msleep">msleep</a>(a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-priority"><strong>priority</strong></a>(...)</dt><dd><tt><a href="#PDFThread-priority">priority</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>.Priority</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-quit"><strong>quit</strong></a>(...)</dt><dd><tt><a href="#PDFThread-quit">quit</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-requestInterruption"><strong>requestInterruption</strong></a>(...)</dt><dd><tt><a href="#PDFThread-requestInterruption">requestInterruption</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setEventDispatcher"><strong>setEventDispatcher</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setEventDispatcher">setEventDispatcher</a>(self,&nbsp;eventDispatcher:&nbsp;Optional[QAbstractEventDispatcher])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setPriority"><strong>setPriority</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setPriority">setPriority</a>(self,&nbsp;priority:&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>.Priority)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setStackSize"><strong>setStackSize</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setStackSize">setStackSize</a>(self,&nbsp;stackSize:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setTerminationEnabled"><strong>setTerminationEnabled</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setTerminationEnabled">setTerminationEnabled</a>(enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-sleep"><strong>sleep</strong></a>(...)</dt><dd><tt><a href="#PDFThread-sleep">sleep</a>(a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-stackSize"><strong>stackSize</strong></a>(...)</dt><dd><tt><a href="#PDFThread-stackSize">stackSize</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-start"><strong>start</strong></a>(...)</dt><dd><tt><a href="#PDFThread-start">start</a>(self,&nbsp;priority:&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>.Priority&nbsp;=&nbsp;<a href="PyQt5.QtCore.html#QThread">QThread</a>.InheritPriority)</tt></dd></dl>
+
+<strong>started</strong> = &lt;unbound PYQT_SIGNAL started()&gt;
+<dl><dt><a name="PDFThread-terminate"><strong>terminate</strong></a>(...)</dt><dd><tt><a href="#PDFThread-terminate">terminate</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-usleep"><strong>usleep</strong></a>(...)</dt><dd><tt><a href="#PDFThread-usleep">usleep</a>(a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-wait"><strong>wait</strong></a>(...)</dt><dd><tt><a href="#PDFThread-wait">wait</a>(self,&nbsp;msecs:&nbsp;int&nbsp;=&nbsp;ULONG_MAX)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#PDFThread-wait">wait</a>(self,&nbsp;deadline:&nbsp;QDeadlineTimer)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-yieldCurrentThread"><strong>yieldCurrentThread</strong></a>(...)</dt><dd><tt><a href="#PDFThread-yieldCurrentThread">yieldCurrentThread</a>()</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QThread">PyQt5.QtCore.QThread</a>:<br>
+<dl><dt><strong>HighPriority</strong> = 4</dl>
+
+<dl><dt><strong>HighestPriority</strong> = 5</dl>
+
+<dl><dt><strong>IdlePriority</strong> = 0</dl>
+
+<dl><dt><strong>InheritPriority</strong> = 7</dl>
+
+<dl><dt><strong>LowPriority</strong> = 2</dl>
+
+<dl><dt><strong>LowestPriority</strong> = 1</dl>
+
+<dl><dt><strong>NormalPriority</strong> = 3</dl>
+
+<dl><dt><strong>Priority</strong> = &lt;class 'PyQt5.QtCore.QThread.Priority'&gt;</dl>
+
+<dl><dt><strong>TimeCriticalPriority</strong> = 6</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="PDFThread-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#PDFThread-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#PDFThread-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><tt><a href="#PDFThread-childEvent">childEvent</a>(self,&nbsp;a0:&nbsp;Optional[QChildEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#PDFThread-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><tt><a href="#PDFThread-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><tt><a href="#PDFThread-customEvent">customEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#PDFThread-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="PDFThread-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#PDFThread-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#PDFThread-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><tt><a href="#PDFThread-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#PDFThread-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#PDFThread-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#PDFThread-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFThread-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#PDFThread-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#PDFThread-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFThread-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#PDFThread-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFThread-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;QMetaMethod)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#PDFThread-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#PDFThread-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#PDFThread-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#PDFThread-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[<a href="PyQt5.QtCore.html#QThread">QThread</a>])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#PDFThread-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="PDFThread-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#PDFThread-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#PDFThread-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#PDFThread-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-receivers"><strong>receivers</strong></a>(...)</dt><dd><tt><a href="#PDFThread-receivers">receivers</a>(self,&nbsp;signal:&nbsp;PYQT_SIGNAL)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFThread-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-sender"><strong>sender</strong></a>(...)</dt><dd><tt><a href="#PDFThread-sender">sender</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><tt><a href="#PDFThread-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#PDFThread-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#PDFThread-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#PDFThread-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#PDFThread-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QThread">QThread</a>]</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><tt><a href="#PDFThread-timerEvent">timerEvent</a>(self,&nbsp;a0:&nbsp;Optional[QTimerEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFThread-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#PDFThread-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="PDFThread-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StartWindow">class <strong>StartWindow</strong></a>(<a href="PyQt5.QtWidgets.html#QMainWindow">PyQt5.QtWidgets.QMainWindow</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#StartWindow">StartWindow</a>&nbsp;-&nbsp;Main&nbsp;GUI&nbsp;window<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;creates&nbsp;the&nbsp;main&nbsp;window&nbsp;for&nbsp;the&nbsp;Image&nbsp;to&nbsp;Pdf&nbsp;Converter&nbsp;GUI.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;folderpath&nbsp;(str):&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;selected&nbsp;folder.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;files&nbsp;(list):&nbsp;List&nbsp;of&nbsp;selected&nbsp;file&nbsp;paths.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pdf_thread&nbsp;(<a href="#PDFThread">PDFThread</a>):&nbsp;Instance&nbsp;of&nbsp;the&nbsp;<a href="#PDFThread">PDFThread</a>&nbsp;class&nbsp;for&nbsp;PDF&nbsp;generation.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="menu.html#StartWindow">StartWindow</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QMainWindow">PyQt5.QtWidgets.QMainWindow</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="StartWindow-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-on_button_click"><strong>on_button_click</strong></a>(self)</dt><dd><tt>Callback&nbsp;for&nbsp;'Choose&nbsp;Folder'&nbsp;button&nbsp;click.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-on_button_click2"><strong>on_button_click2</strong></a>(self)</dt><dd><tt>Callback&nbsp;for&nbsp;'Select&nbsp;Files'&nbsp;button&nbsp;click.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-on_button_click3"><strong>on_button_click3</strong></a>(self)</dt><dd><tt>Callback&nbsp;for&nbsp;'Choose&nbsp;Output&nbsp;Folder'&nbsp;button&nbsp;click.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-on_button_click4"><strong>on_button_click4</strong></a>(self)</dt><dd><tt>Callback&nbsp;for&nbsp;'Convert&nbsp;to&nbsp;Pdf'&nbsp;button&nbsp;click.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-on_checkbox"><strong>on_checkbox</strong></a>(self, state)</dt><dd><tt>Callback&nbsp;for&nbsp;checkbox&nbsp;state&nbsp;change.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-run_pdf_thread"><strong>run_pdf_thread</strong></a>(self, folderpath)</dt><dd><tt>Run&nbsp;<a href="#PDFThread">PDFThread</a>&nbsp;for&nbsp;PDF&nbsp;generation.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-update_progress"><strong>update_progress</strong></a>(self, value)</dt><dd><tt>Callback&nbsp;for&nbsp;updating&nbsp;progress&nbsp;bar.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QMainWindow">PyQt5.QtWidgets.QMainWindow</a>:<br>
+<dl><dt><a name="StartWindow-addDockWidget"><strong>addDockWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-addDockWidget">addDockWidget</a>(self,&nbsp;area:&nbsp;Qt.DockWidgetArea,&nbsp;dockwidget:&nbsp;Optional[QDockWidget])<br>
+<a href="#StartWindow-addDockWidget">addDockWidget</a>(self,&nbsp;area:&nbsp;Qt.DockWidgetArea,&nbsp;dockwidget:&nbsp;Optional[QDockWidget],&nbsp;orientation:&nbsp;Qt.Orientation)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-addToolBar"><strong>addToolBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-addToolBar">addToolBar</a>(self,&nbsp;area:&nbsp;Qt.ToolBarArea,&nbsp;toolbar:&nbsp;Optional[QToolBar])<br>
+<a href="#StartWindow-addToolBar">addToolBar</a>(self,&nbsp;toolbar:&nbsp;Optional[QToolBar])<br>
+<a href="#StartWindow-addToolBar">addToolBar</a>(self,&nbsp;title:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Optional[QToolBar]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-addToolBarBreak"><strong>addToolBarBreak</strong></a>(...)</dt><dd><tt><a href="#StartWindow-addToolBarBreak">addToolBarBreak</a>(self,&nbsp;area:&nbsp;Qt.ToolBarArea&nbsp;=&nbsp;Qt.TopToolBarArea)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-centralWidget"><strong>centralWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-centralWidget">centralWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;event:&nbsp;Optional[QContextMenuEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-corner"><strong>corner</strong></a>(...)</dt><dd><tt><a href="#StartWindow-corner">corner</a>(self,&nbsp;corner:&nbsp;Qt.Corner)&nbsp;-&gt;&nbsp;Qt.DockWidgetArea</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-createPopupMenu"><strong>createPopupMenu</strong></a>(...)</dt><dd><tt><a href="#StartWindow-createPopupMenu">createPopupMenu</a>(self)&nbsp;-&gt;&nbsp;Optional[QMenu]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dockOptions"><strong>dockOptions</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dockOptions">dockOptions</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOptions</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dockWidgetArea"><strong>dockWidgetArea</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dockWidgetArea">dockWidgetArea</a>(self,&nbsp;dockwidget:&nbsp;Optional[QDockWidget])&nbsp;-&gt;&nbsp;Qt.DockWidgetArea</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-documentMode"><strong>documentMode</strong></a>(...)</dt><dd><tt><a href="#StartWindow-documentMode">documentMode</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#StartWindow-event">event</a>(self,&nbsp;event:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-iconSize"><strong>iconSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-iconSize">iconSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<strong>iconSizeChanged</strong> = &lt;unbound PYQT_SIGNAL iconSizeChanged(QSize)&gt;
+<dl><dt><a name="StartWindow-insertToolBar"><strong>insertToolBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-insertToolBar">insertToolBar</a>(self,&nbsp;before:&nbsp;Optional[QToolBar],&nbsp;toolbar:&nbsp;Optional[QToolBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-insertToolBarBreak"><strong>insertToolBarBreak</strong></a>(...)</dt><dd><tt><a href="#StartWindow-insertToolBarBreak">insertToolBarBreak</a>(self,&nbsp;before:&nbsp;Optional[QToolBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isAnimated"><strong>isAnimated</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isAnimated">isAnimated</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isDockNestingEnabled"><strong>isDockNestingEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isDockNestingEnabled">isDockNestingEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isSeparator"><strong>isSeparator</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isSeparator">isSeparator</a>(self,&nbsp;pos:&nbsp;QPoint)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-menuBar"><strong>menuBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-menuBar">menuBar</a>(self)&nbsp;-&gt;&nbsp;Optional[QMenuBar]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-menuWidget"><strong>menuWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-menuWidget">menuWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-removeDockWidget"><strong>removeDockWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-removeDockWidget">removeDockWidget</a>(self,&nbsp;dockwidget:&nbsp;Optional[QDockWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-removeToolBar"><strong>removeToolBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-removeToolBar">removeToolBar</a>(self,&nbsp;toolbar:&nbsp;Optional[QToolBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-removeToolBarBreak"><strong>removeToolBarBreak</strong></a>(...)</dt><dd><tt><a href="#StartWindow-removeToolBarBreak">removeToolBarBreak</a>(self,&nbsp;before:&nbsp;Optional[QToolBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-resizeDocks"><strong>resizeDocks</strong></a>(...)</dt><dd><tt><a href="#StartWindow-resizeDocks">resizeDocks</a>(self,&nbsp;docks:&nbsp;Iterable[QDockWidget],&nbsp;sizes:&nbsp;Iterable[int],&nbsp;orientation:&nbsp;Qt.Orientation)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-restoreDockWidget"><strong>restoreDockWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-restoreDockWidget">restoreDockWidget</a>(self,&nbsp;dockwidget:&nbsp;Optional[QDockWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-restoreState"><strong>restoreState</strong></a>(...)</dt><dd><tt><a href="#StartWindow-restoreState">restoreState</a>(self,&nbsp;state:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray],&nbsp;version:&nbsp;int&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-saveState"><strong>saveState</strong></a>(...)</dt><dd><tt><a href="#StartWindow-saveState">saveState</a>(self,&nbsp;version:&nbsp;int&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAnimated"><strong>setAnimated</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAnimated">setAnimated</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setCentralWidget"><strong>setCentralWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setCentralWidget">setCentralWidget</a>(self,&nbsp;widget:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setCorner"><strong>setCorner</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setCorner">setCorner</a>(self,&nbsp;corner:&nbsp;Qt.Corner,&nbsp;area:&nbsp;Qt.DockWidgetArea)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setDockNestingEnabled"><strong>setDockNestingEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setDockNestingEnabled">setDockNestingEnabled</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setDockOptions"><strong>setDockOptions</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setDockOptions">setDockOptions</a>(self,&nbsp;options:&nbsp;Union[<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOptions,&nbsp;<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOption])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setDocumentMode"><strong>setDocumentMode</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setDocumentMode">setDocumentMode</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setIconSize"><strong>setIconSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setIconSize">setIconSize</a>(self,&nbsp;iconSize:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMenuBar"><strong>setMenuBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMenuBar">setMenuBar</a>(self,&nbsp;menubar:&nbsp;Optional[QMenuBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMenuWidget"><strong>setMenuWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMenuWidget">setMenuWidget</a>(self,&nbsp;menubar:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setStatusBar"><strong>setStatusBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setStatusBar">setStatusBar</a>(self,&nbsp;statusbar:&nbsp;Optional[QStatusBar])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setTabPosition"><strong>setTabPosition</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setTabPosition">setTabPosition</a>(self,&nbsp;areas:&nbsp;Union[Qt.DockWidgetAreas,&nbsp;Qt.DockWidgetArea],&nbsp;tabPosition:&nbsp;QTabWidget.TabPosition)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setTabShape"><strong>setTabShape</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setTabShape">setTabShape</a>(self,&nbsp;tabShape:&nbsp;QTabWidget.TabShape)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setToolButtonStyle"><strong>setToolButtonStyle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setToolButtonStyle">setToolButtonStyle</a>(self,&nbsp;toolButtonStyle:&nbsp;Qt.ToolButtonStyle)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setUnifiedTitleAndToolBarOnMac"><strong>setUnifiedTitleAndToolBarOnMac</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setUnifiedTitleAndToolBarOnMac">setUnifiedTitleAndToolBarOnMac</a>(self,&nbsp;set:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-splitDockWidget"><strong>splitDockWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-splitDockWidget">splitDockWidget</a>(self,&nbsp;after:&nbsp;Optional[QDockWidget],&nbsp;dockwidget:&nbsp;Optional[QDockWidget],&nbsp;orientation:&nbsp;Qt.Orientation)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-statusBar"><strong>statusBar</strong></a>(...)</dt><dd><tt><a href="#StartWindow-statusBar">statusBar</a>(self)&nbsp;-&gt;&nbsp;Optional[QStatusBar]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-tabPosition"><strong>tabPosition</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tabPosition">tabPosition</a>(self,&nbsp;area:&nbsp;Qt.DockWidgetArea)&nbsp;-&gt;&nbsp;QTabWidget.TabPosition</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-tabShape"><strong>tabShape</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tabShape">tabShape</a>(self)&nbsp;-&gt;&nbsp;QTabWidget.TabShape</tt></dd></dl>
+
+<strong>tabifiedDockWidgetActivated</strong> = &lt;unbound PYQT_SIGNAL tabifiedDockWidgetActivated(QDockWidget*)&gt;
+<dl><dt><a name="StartWindow-tabifiedDockWidgets"><strong>tabifiedDockWidgets</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tabifiedDockWidgets">tabifiedDockWidgets</a>(self,&nbsp;dockwidget:&nbsp;Optional[QDockWidget])&nbsp;-&gt;&nbsp;List[QDockWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-tabifyDockWidget"><strong>tabifyDockWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tabifyDockWidget">tabifyDockWidget</a>(self,&nbsp;first:&nbsp;Optional[QDockWidget],&nbsp;second:&nbsp;Optional[QDockWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-takeCentralWidget"><strong>takeCentralWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-takeCentralWidget">takeCentralWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-toolBarArea"><strong>toolBarArea</strong></a>(...)</dt><dd><tt><a href="#StartWindow-toolBarArea">toolBarArea</a>(self,&nbsp;toolbar:&nbsp;Optional[QToolBar])&nbsp;-&gt;&nbsp;Qt.ToolBarArea</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-toolBarBreak"><strong>toolBarBreak</strong></a>(...)</dt><dd><tt><a href="#StartWindow-toolBarBreak">toolBarBreak</a>(self,&nbsp;toolbar:&nbsp;Optional[QToolBar])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-toolButtonStyle"><strong>toolButtonStyle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-toolButtonStyle">toolButtonStyle</a>(self)&nbsp;-&gt;&nbsp;Qt.ToolButtonStyle</tt></dd></dl>
+
+<strong>toolButtonStyleChanged</strong> = &lt;unbound PYQT_SIGNAL toolButtonStyleChanged(Qt::ToolButtonStyle)&gt;
+<dl><dt><a name="StartWindow-unifiedTitleAndToolBarOnMac"><strong>unifiedTitleAndToolBarOnMac</strong></a>(...)</dt><dd><tt><a href="#StartWindow-unifiedTitleAndToolBarOnMac">unifiedTitleAndToolBarOnMac</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QMainWindow">PyQt5.QtWidgets.QMainWindow</a>:<br>
+<dl><dt><strong>AllowNestedDocks</strong> = 2</dl>
+
+<dl><dt><strong>AllowTabbedDocks</strong> = 4</dl>
+
+<dl><dt><strong>AnimatedDocks</strong> = 1</dl>
+
+<dl><dt><strong>DockOption</strong> = &lt;class 'PyQt5.QtWidgets.QMainWindow.DockOption'&gt;</dl>
+
+<dl><dt><strong>DockOptions</strong> = &lt;class 'PyQt5.QtWidgets.QMainWindow.DockOptions'&gt;<dd><tt><a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.<a href="#StartWindow-DockOptions">DockOptions</a>()<br>
+<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.<a href="#StartWindow-DockOptions">DockOptions</a>(f:&nbsp;Union[<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOptions,&nbsp;<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOption])<br>
+<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.<a href="#StartWindow-DockOptions">DockOptions</a>(a0:&nbsp;<a href="PyQt5.QtWidgets.html#QMainWindow">QMainWindow</a>.DockOptions)</tt></dl>
+
+<dl><dt><strong>ForceTabbedDocks</strong> = 8</dl>
+
+<dl><dt><strong>GroupedDragging</strong> = 32</dl>
+
+<dl><dt><strong>VerticalTabs</strong> = 16</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="StartWindow-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#StartWindow-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#StartWindow-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#StartWindow-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-actionEvent"><strong>actionEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-actionEvent">actionEvent</a>(self,&nbsp;a0:&nbsp;Optional[QActionEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#StartWindow-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#StartWindow-activateWindow">activateWindow</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#StartWindow-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#StartWindow-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-adjustSize">adjustSize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#StartWindow-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-changeEvent"><strong>changeEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-changeEvent">changeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#StartWindow-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#StartWindow-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#StartWindow-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#StartWindow-clearFocus">clearFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#StartWindow-clearMask">clearMask</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#StartWindow-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-closeEvent">closeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QCloseEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#StartWindow-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-create"><strong>create</strong></a>(...)</dt><dd><tt><a href="#StartWindow-create">create</a>(self,&nbsp;window:&nbsp;PyQt5.sip.voidptr&nbsp;=&nbsp;None,&nbsp;initializeWindow:&nbsp;bool&nbsp;=&nbsp;True,&nbsp;destroyOldWindow:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#StartWindow-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#StartWindow-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="StartWindow-destroy"><strong>destroy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-destroy">destroy</a>(self,&nbsp;destroyWindow:&nbsp;bool&nbsp;=&nbsp;True,&nbsp;destroySubWindows:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#StartWindow-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dragEnterEvent">dragEnterEvent</a>(self,&nbsp;a0:&nbsp;Optional[QDragEnterEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dragLeaveEvent">dragLeaveEvent</a>(self,&nbsp;a0:&nbsp;Optional[QDragLeaveEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dragMoveEvent">dragMoveEvent</a>(self,&nbsp;a0:&nbsp;Optional[QDragMoveEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dropEvent"><strong>dropEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dropEvent">dropEvent</a>(self,&nbsp;a0:&nbsp;Optional[QDropEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#StartWindow-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#StartWindow-ensurePolished">ensurePolished</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-enterEvent"><strong>enterEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-enterEvent">enterEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#StartWindow-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusInEvent">focusInEvent</a>(self,&nbsp;a0:&nbsp;Optional[QFocusEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusNextChild">focusNextChild</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusNextPrevChild">focusNextPrevChild</a>(self,&nbsp;next:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusOutEvent">focusOutEvent</a>(self,&nbsp;a0:&nbsp;Optional[QFocusEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusPreviousChild">focusPreviousChild</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#StartWindow-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#StartWindow-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#StartWindow-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt><a href="#StartWindow-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#StartWindow-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#StartWindow-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#StartWindow-grabKeyboard">grabKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#StartWindow-grabMouse">grabMouse</a>(self)<br>
+<a href="#StartWindow-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#StartWindow-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#StartWindow-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-hideEvent"><strong>hideEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-hideEvent">hideEvent</a>(self,&nbsp;a0:&nbsp;Optional[QHideEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-initPainter"><strong>initPainter</strong></a>(...)</dt><dd><tt><a href="#StartWindow-initPainter">initPainter</a>(self,&nbsp;painter:&nbsp;Optional[QPainter])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-inputMethodEvent">inputMethodEvent</a>(self,&nbsp;a0:&nbsp;Optional[QInputMethodEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#StartWindow-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#StartWindow-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#StartWindow-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#StartWindow-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-keyPressEvent">keyPressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-keyReleaseEvent">keyReleaseEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#StartWindow-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#StartWindow-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#StartWindow-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-leaveEvent">leaveEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#StartWindow-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#StartWindow-lower">lower</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-metric"><strong>metric</strong></a>(...)</dt><dd><tt><a href="#StartWindow-metric">metric</a>(self,&nbsp;a0:&nbsp;QPaintDevice.PaintDeviceMetric)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#StartWindow-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mouseDoubleClickEvent">mouseDoubleClickEvent</a>(self,&nbsp;a0:&nbsp;Optional[QMouseEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mouseMoveEvent">mouseMoveEvent</a>(self,&nbsp;a0:&nbsp;Optional[QMouseEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mousePressEvent">mousePressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QMouseEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-mouseReleaseEvent">mouseReleaseEvent</a>(self,&nbsp;a0:&nbsp;Optional[QMouseEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#StartWindow-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#StartWindow-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-moveEvent"><strong>moveEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-moveEvent">moveEvent</a>(self,&nbsp;a0:&nbsp;Optional[QMoveEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-nativeEvent">nativeEvent</a>(self,&nbsp;eventType:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray],&nbsp;message:&nbsp;Optional[PyQt5.sip.voidptr])&nbsp;-&gt;&nbsp;(bool,&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#StartWindow-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#StartWindow-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#StartWindow-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#StartWindow-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-paintEvent"><strong>paintEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-paintEvent">paintEvent</a>(self,&nbsp;a0:&nbsp;Optional[QPaintEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#StartWindow-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#StartWindow-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#StartWindow-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#StartWindow-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#StartWindow-raise_">raise_</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#StartWindow-releaseKeyboard">releaseKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#StartWindow-releaseMouse">releaseMouse</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#StartWindow-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#StartWindow-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#StartWindow-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#StartWindow-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#StartWindow-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#StartWindow-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#StartWindow-repaint">repaint</a>(self)<br>
+<a href="#StartWindow-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#StartWindow-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#StartWindow-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#StartWindow-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-resizeEvent">resizeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QResizeEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#StartWindow-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#StartWindow-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#StartWindow-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#StartWindow-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#StartWindow-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#StartWindow-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFocus">setFocus</a>(self)<br>
+<a href="#StartWindow-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#StartWindow-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#StartWindow-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#StartWindow-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#StartWindow-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#StartWindow-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#StartWindow-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#StartWindow-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt><dd><tt><a href="#StartWindow-sharedPainter">sharedPainter</a>(self)&nbsp;-&gt;&nbsp;Optional[QPainter]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#StartWindow-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-showEvent">showEvent</a>(self,&nbsp;a0:&nbsp;Optional[QShowEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#StartWindow-showFullScreen">showFullScreen</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#StartWindow-showMaximized">showMaximized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#StartWindow-showMinimized">showMinimized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#StartWindow-showNormal">showNormal</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#StartWindow-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#StartWindow-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#StartWindow-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#StartWindow-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#StartWindow-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#StartWindow-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#StartWindow-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#StartWindow-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tabletEvent">tabletEvent</a>(self,&nbsp;a0:&nbsp;Optional[QTabletEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#StartWindow-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#StartWindow-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#StartWindow-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#StartWindow-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#StartWindow-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#StartWindow-unsetCursor">unsetCursor</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#StartWindow-unsetLayoutDirection">unsetLayoutDirection</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#StartWindow-unsetLocale">unsetLocale</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#StartWindow-update">update</a>(self)<br>
+<a href="#StartWindow-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#StartWindow-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#StartWindow-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#StartWindow-updateGeometry">updateGeometry</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt><dd><tt><a href="#StartWindow-updateMicroFocus">updateMicroFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#StartWindow-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#StartWindow-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#StartWindow-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-wheelEvent">wheelEvent</a>(self,&nbsp;a0:&nbsp;Optional[QWheelEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#StartWindow-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#StartWindow-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#StartWindow-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="StartWindow-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="StartWindow-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="StartWindow-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#StartWindow-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#StartWindow-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#StartWindow-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><tt>QWidget.<a href="#StartWindow-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#StartWindow-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#StartWindow-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="StartWindow-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#StartWindow-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#StartWindow-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-childEvent">childEvent</a>(self,&nbsp;a0:&nbsp;Optional[QChildEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#StartWindow-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><tt><a href="#StartWindow-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-customEvent">customEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#StartWindow-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="StartWindow-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#StartWindow-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#StartWindow-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><tt><a href="#StartWindow-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#StartWindow-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#StartWindow-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#StartWindow-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#StartWindow-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#StartWindow-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#StartWindow-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#StartWindow-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;QMetaMethod)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#StartWindow-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#StartWindow-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#StartWindow-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#StartWindow-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[<a href="PyQt5.QtCore.html#QThread">QThread</a>])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#StartWindow-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="StartWindow-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#StartWindow-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#StartWindow-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-receivers"><strong>receivers</strong></a>(...)</dt><dd><tt><a href="#StartWindow-receivers">receivers</a>(self,&nbsp;signal:&nbsp;PYQT_SIGNAL)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#StartWindow-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-sender"><strong>sender</strong></a>(...)</dt><dd><tt><a href="#StartWindow-sender">sender</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><tt><a href="#StartWindow-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#StartWindow-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#StartWindow-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#StartWindow-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#StartWindow-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QThread">QThread</a>]</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><tt><a href="#StartWindow-timerEvent">timerEvent</a>(self,&nbsp;a0:&nbsp;Optional[QTimerEvent])</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#StartWindow-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="StartWindow-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#StartWindow-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#StartWindow-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#StartWindow-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#StartWindow-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#StartWindow-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#StartWindow-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#StartWindow-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#StartWindow-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#StartWindow-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#StartWindow-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#StartWindow-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="StartWindow-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#StartWindow-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="StartWindow-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Main&nbsp;function&nbsp;to&nbsp;start&nbsp;the&nbsp;application.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;initializes&nbsp;the&nbsp;PyQt&nbsp;application,&nbsp;creates&nbsp;an&nbsp;instance&nbsp;of&nbsp;the<br>
+<a href="#StartWindow">StartWindow</a>,&nbsp;and&nbsp;starts&nbsp;the&nbsp;application&nbsp;event&nbsp;loop.<br>
+&nbsp;<br>
+Parameters:<br>
+None<br>
+&nbsp;<br>
+Returns:<br>
+None</tt></dd></dl>
+</td></tr></table>
+</body></html>

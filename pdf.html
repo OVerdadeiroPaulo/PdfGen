@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>pdf</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/paulo/Documents/recibo/pdfGen/pdf.py">/home/paulo/Documents/recibo/pdfGen/pdf.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PIL.Image.html">PIL.Image</a><br>
+</td><td width="25%" valign=top><a href="reportlab.pdfgen.canvas.html">reportlab.pdfgen.canvas</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>(<a href="PyQt5.sip.html#wrapper">sip.wrapper</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdf.html#PDFGenerator">PDFGenerator</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFGenerator">class <strong>PDFGenerator</strong></a>(<a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdf.html#PDFGenerator">PDFGenerator</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFGenerator-create_pdf"><strong>create_pdf</strong></a>(self, folder)</dt><dd><tt>Create&nbsp;a&nbsp;PDF&nbsp;from&nbsp;a&nbsp;folder&nbsp;of&nbsp;images.<br>
+&nbsp;<br>
+Args:<br>
+-&nbsp;folder&nbsp;(str):&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;folder&nbsp;containing&nbsp;images.</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-create_pdf_multiple"><strong>create_pdf_multiple</strong></a>(self, files, folder)</dt><dd><tt>Create&nbsp;a&nbsp;multipaged&nbsp;PDF&nbsp;from&nbsp;a&nbsp;list&nbsp;of&nbsp;image&nbsp;files.<br>
+&nbsp;<br>
+Args:<br>
+-&nbsp;files&nbsp;(list):&nbsp;List&nbsp;of&nbsp;paths&nbsp;to&nbsp;image&nbsp;files.<br>
+-&nbsp;folder&nbsp;(str):&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;output&nbsp;folder.</tt></dd></dl>
+
+<strong>progress_signal</strong> = &lt;unbound PYQT_SIGNAL progress_signal(int)&gt;
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="PDFGenerator-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-childEvent">childEvent</a>(self,&nbsp;a0:&nbsp;Optional[QChildEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-children">children</a>(self)&nbsp;-&gt;&nbsp;List[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-customEvent">customEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="PDFGenerator-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#PDFGenerator-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#PDFGenerator-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#PDFGenerator-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;QMetaMethod)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="PDFGenerator-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt><a href="PyQt5.QtCore.html#QObject">QObject</a>.<a href="#PDFGenerator-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-receivers"><strong>receivers</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-receivers">receivers</a>(self,&nbsp;signal:&nbsp;PYQT_SIGNAL)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-sender"><strong>sender</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-sender">sender</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-timerEvent">timerEvent</a>(self,&nbsp;a0:&nbsp;Optional[QTimerEvent])</tt></dd></dl>
+
+<dl><dt><a name="PDFGenerator-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#PDFGenerator-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="PDFGenerator-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="PDFGenerator-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>current_time</strong> = datetime.datetime(2024, 3, 4, 22, 27, 30, 876507)<br>
+<strong>formatted_time</strong> = '04222730'<br>
+<strong>letter</strong> = (612.0, 792.0)</td></tr></table>
+</body></html>
